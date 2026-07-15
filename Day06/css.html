@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!doctype html>
+	<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width,initial-scale=1">
+	  <title>Love Poems</title>
+	<style>
+		*{box-sizing:border-box}
+		body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#FDEBD0,#FFF5F7);color:#222;padding:30px}
+		.container{max-width:1000px;margin:0 auto}
+		.header{background:#fff;padding:18px;border-radius:10px;margin-bottom:18px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+		.header-title{margin:0;color:#DC143C}
+		.header-subtext{margin:6px 0 0;color:#444}
+
+		.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+		.card{padding:14px;border-radius:10px;min-height:110px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .18s ease,background .18s ease,color .18s ease,box-shadow .18s ease;cursor:pointer;border:1px solid rgba(0,0,0,0.03);box-shadow:0 8px 20px rgba(0,0,0,0.04)}
+
+		/* Color variants (class-based) */
+		.card-peach{background:#FFDAB9;color:#8B0000}
+		.card-peach:hover{background:#8B0000;color:#FFDAB9}
+
+		.card-misty{background:#FFE4E1;color:#F75270}
+		.card-misty:hover{background:#F75270;color:#FFE4E1}
+
+		.card-soft{background:#FADBD8;color:#F75270}
+		.card-soft:hover{background:#F75270;color:#FADBD8}
+
+		.card-ivory{background:#FFF5F7;color:#DC143C}
+		.card-ivory:hover{background:#DC143C;color:#FFF5F7}
+
+		.card-pale{background:#F7CAC9;color:#8B0000}
+		.card-pale:hover{background:#8B0000;color:#F7CAC9}
+
+		.card-blush{background:#FFF0F2;color:#F75270}
+		.card-blush:hover{background:#F75270;color:#FFF0F2}
+
+		.author{font-weight:700;text-align:right;font-size:0.9rem}
+
+		/* make two cards taller for variety */
+		.card.tall{min-height:150px}
+
+		@media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+		@media (max-width:500px){.grid{grid-template-columns:1fr;padding:0}}
+	</style>
+	</head>
+	<body>
+	  <div class="container">
+				<div class="header">
+					<h1 class="header-title">Love Poems</h1>
+					<p class="header-subtext">Hover any card to swap the text and background colors.</p>
+				</div>
+
+		<div class="grid">
+						<div class="card tall card-peach">
+			<p>You fit the curve of morning, soft and slow —<br>like light that learns to linger where I go.</p>
+			<div class="author">— Mira Stone</div>
+		  </div>
+
+						<div class="card card-misty">
+			<p>Two quiet hands that know the map of mine,<br>we trace the edges till the nights align.</p>
+			<div class="author">— Arin Vale</div>
+		  </div>
+
+						<div class="card card-soft">
+			<p>Say my name like summer says the shore,<br>and all the wild returns, wanting more.</p>
+			<div class="author">— L. H. Rivers</div>
+		  </div>
+
+						<div class="card tall card-ivory">
+			<p>Your laugh bends space between our days,<br>folds the distance into simpler ways.</p>
+			<div class="author">— Noor Iqbal</div>
+		  </div>
+
+						<div class="card card-pale">
+			<p>I keep a small room in me for only you —<br>a window, a glass of moonlight, and a view.</p>
+			<div class="author">— C. R. Hale</div>
+		  </div>
+
+						<div class="card card-blush">
+			<p>If time could be a ribbon, I would tie<br>our days in loops so none could say goodbye.</p>
+			<div class="author">— S. K. Juno</div>
+		  </div>
+		</div>
+	  </div>
+	</body>
+	</html>
+
+</body>
+</html>
+

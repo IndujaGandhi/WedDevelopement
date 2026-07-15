@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Boxs</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 10px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 10px;
+            background-color: #D6FB61;
+            border: 2px solid #08CB00;
+            padding: 10px;
+            width: 100%;
+            max-width: 100%;
+        }
+        .header {
+            display: grid;
+            grid-column: span 6;
+            padding: 20px;
+            min-height: 60px;
+            border: 2px solid #8140DC;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: #B5BAFF;
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+        .sidebar {
+            display: grid;
+            grid-column: span 2;
+            grid-row: 2 / span 2;
+            padding: 20px;
+            min-height: 100px;
+            border: 2px solid #E22F80;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFF2DB;
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+        .content {
+            display: grid;
+            grid-column: 3 /span 3;
+            padding: 20px;
+            border: 2px solid #254F22;  
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: #B5E18B;
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+        .content2 {
+            display: grid;
+            grid-column: 3 /span 2;
+            grid-row: 3 / span 1;
+            padding: 20px;
+            border: 2px solid #254F22;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: #B5E18B;
+
+        }
+        .ads{
+            display: grid;
+            grid-column: 5/span 1;
+            padding: 20px;
+            border: 2px solid #FF6A1C;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFD45A;
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+        .ads2{
+            display: grid;
+            grid-column: 6/span 1;
+            grid-row: 2 / span 2;
+            padding: 20px;
+            border: 2px solid #FF6A1C;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFD45A;
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+        .footer {
+            display: grid;
+            grid-column: span 6;
+            padding: 20px;
+            border: 2px solid #810B38;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: #DCC3AA;
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header (6 columns)</div>
+        <div class="sidebar">Sidebar (2 column)</div>
+        <div class="content">Content (3 columns)</div>  
+        <div class="content2">Content2 (3 row 2 columns)</div>
+        <div class="ads">Ads (1 column)</div>
+        <div class="ads2">Ads 2 (1 column)</div>
+        <div class="footer">Footer (6 columns)</div>
+    </div>
+</body>
+</html>
