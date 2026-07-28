@@ -6,11 +6,43 @@
     <title>Login Page</title>
 </head>
 <body>
-    <h1 class="h1">Login Page</h1>
-    <div class="loginsection">
+    <h1 class="h1">SignIn Page</h1>
+    <div class="signsection">
         <form >
             <label for="Username">Username:</label>
+            <input type="text" id="username" required><br><br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br><br>         
         </form>
     </div>
+    <h1>Login Page</h1>
+    <div class="Loginsection">
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="usernamelog" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="passwordlog" required><br><br>
+            <button type="submit" onclick="login()">Login</button>
+        </form>
+    </div>
+    <script>
+        const userreg = document.getElementById('username').value;
+        const passreg = document.getElementById('password').value;
+
+        const passlog = document.getElementById('passwordlog').value;
+        const userlog = document.getElementById('usernamelog').value;
+        function login(){
+            if(userreg===userlog && passreg===passlog)
+            {
+                alert("Login successful!");
+            }
+            else
+            {
+                alert("Invalid username or password.");
+            }
+        }
+    </script>
 </body>
 </html>
