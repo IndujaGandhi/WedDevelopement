@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz App</title>
+</head>
+<body>
+
+<h2>Quiz App</h2>
+
+<p id="timer">Time: 10</p>
+
+<p>1. What is the capital of India?</p>
+
+<input type="radio" name="q1" value="Mumbai"> Mumbai <br>
+<input type="radio" name="q1" value="Delhi"> Delhi <br>
+<input type="radio" name="q1" value="Chennai"> Chennai <br>
+<input type="radio" name="q1" value="Kolkata"> Kolkata <br><br>
+
+<button onclick="checkAnswer()">Submit</button>
+
+<h3 id="result"></h3>
+
+<script>
+
+let time = 10;
+
+let countdown = setInterval(function () {
+
+    time--;
+
+    document.getElementById("timer").innerHTML = "Time: " + time;
+
+    if (time == 0) {
+        clearInterval(countdown);
+        checkAnswer();
+    }
+
+}, 1000);
+
+function checkAnswer() {
+
+    clearInterval(countdown);
+
+    let answer = document.querySelector('input[name="q1"]:checked');
+
+    if (answer == null) {
+        document.getElementById("result").innerHTML = "Time's Up! No Answer";
+    }
+    else if (answer.value == "Delhi") {
+        document.getElementById("result").innerHTML = "Correct Answer!";
+    }
+    else {
+        document.getElementById("result").innerHTML = "Wrong Answer!";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

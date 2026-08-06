@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTP Generator</title>
+</head>
+<body>
+
+<button onclick="generateOTP()">Generate OTP</button>
+
+<p id="showOTP"></p>
+
+<input type="text" id="userOTP" placeholder="Enter OTP">
+
+<button onclick="verifyOTP()">Verify OTP</button>
+
+<script>
+let otp = "";
+
+function generateOTP() {
+    let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    otp = "";
+
+    for (let i = 0; i < 4; i++) {
+        let randomIndex = Math.floor(Math.random() * chars.length);
+        otp += chars[randomIndex];
+    }
+
+    document.getElementById("showOTP").innerHTML = "OTP: " + otp;
+}
+
+function verifyOTP() {
+    let userInput = document.getElementById("userOTP").value;
+
+    if (userInput === otp) {
+        alert("OTP Verified Successfully!");
+    } else {
+        alert("Invalid OTP!");
+    }
+}
+</script>
+
+</body>
+</html>
